@@ -1,6 +1,6 @@
 cask "prism" do
-  version "1.9.2"
-  sha256 "8273b976a91160405176cc34ec323cdc275b80b2f7a45d45a33c593a2bcb4dda"
+  version "2.0.0"
+  sha256 "564e412528dfec9f72917768d71a580f1183ca6ffecd3331c2aebd2c935590d9"
 
   url "https://github.com/rajatraina747/prism/releases/download/v#{version}/Prism_#{version}_aarch64.dmg"
   name "Prism"
@@ -17,13 +17,24 @@ cask "prism" do
 
   app "Prism.app"
 
+  # Both identifiers on purpose. 2.0 moved the bundle id from com.prism.app to
+  # com.rainacorp.prism, and that migration copies — it never moves and never
+  # deletes the old directory, which stays as a fallback. So anyone who came
+  # through an upgrade has data under both names, and zapping only one would
+  # leave the other behind.
   zap trash: [
     "~/Library/Application Support/com.prism.app",
+    "~/Library/Application Support/com.rainacorp.prism",
     "~/Library/Caches/com.prism.app",
+    "~/Library/Caches/com.rainacorp.prism",
     "~/Library/Preferences/com.prism.app.plist",
+    "~/Library/Preferences/com.rainacorp.prism.plist",
     "~/Library/Preferences/com.prism.app.allowed-dirs.json",
+    "~/Library/Preferences/com.rainacorp.prism.allowed-dirs.json",
     "~/Library/Saved Application State/com.prism.app.savedState",
+    "~/Library/Saved Application State/com.rainacorp.prism.savedState",
     "~/Library/WebKit/com.prism.app",
+    "~/Library/WebKit/com.rainacorp.prism",
   ]
 
   caveats do
