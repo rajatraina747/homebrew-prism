@@ -1,6 +1,6 @@
 cask "prism" do
-  version "2.0.2"
-  sha256 "60195cfe9e4c8fdfa1d96818446baba285f4a2a62103fa4d511f5b308df5125e"
+  version "2.0.3"
+  sha256 "d07f7b4c5f5ee195489f1195d20226e05f1e4919a532085a11da5c96e4863090"
 
   url "https://github.com/rajatraina747/prism/releases/download/v#{version}/Prism_#{version}_aarch64.dmg"
   name "Prism"
