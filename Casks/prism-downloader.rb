@@ -1,4 +1,4 @@
-cask "prism" do
+cask "prism-downloader" do
   version "2.0.4"
   sha256 "bddbd822949c7ac0d8231339be196388e0f20013dd0f02b0a47d0eae66b6b67a"
 
