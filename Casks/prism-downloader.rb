@@ -12,6 +12,8 @@ cask "prism-downloader" do
     strategy :github_latest
   end
 
+  # Prism updates itself (Settings → Updates), so `brew upgrade` leaves it be.
+  auto_updates true
   depends_on :macos
   depends_on arch: :arm64
 
