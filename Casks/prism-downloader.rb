@@ -1,6 +1,6 @@
 cask "prism-downloader" do
-  version "2.6.4"
-  sha256 "c9cc49ce771b32302660dd7d29d343a378f2da90213e87c7895db2749ec240a6"
+  version "2.7.0"
+  sha256 "aff5c063ac0efe968df8c3de70ffc78304729123ba750db8ab590d5aba59e715"
 
   url "https://github.com/rajatraina747/prism/releases/download/v#{version}/Prism_#{version}_aarch64.dmg"
   name "Prism"
